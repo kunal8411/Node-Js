@@ -3,8 +3,10 @@ const port =8000;
 
 const app=express();
 
+
+//get method is used to get infor from DB 
 app.get('/',function(req,res){
-    res.send("<h2>hello i am here, successfully</h2>")
+    res.send("<h2>hello i am here, successfully</h2>") //same like res.end() , in angular we use res.send().
 });
 
 
