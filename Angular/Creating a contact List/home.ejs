@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            
+            <%=title %>
+            
+        </title>
+    </head>
+    <body>
+        <h1>
+            Hello you have rendered content from HTML
+        </h1>
+        <ul>
+            
+                <% for(let i=1;i<10;i++){   %> //playing around ejs
+
+                  
+                        <li>
+                            <%=i%>
+                        </li>
+               <% } %>
+
+        </ul>
+        <div>
+            <p>
+                <%for(let i of contact_list){%>       //for loop to iterate over all elements in Contact_list
+                    <ul>
+                        <li>
+                         <p>  <%=i.name%></p>  //print name of each contact 
+                        
+                         <p>   <%=i.phoneNo%></p> //print phone no of each person 
+                        </li>    
+                    </ul>
+                <%}%>
+
+            </p>
+        </div>
+              
+            
+        <%if(true){%> //simple coding // playing around ejs 
+            <h1>true</h1>
+
+        <%}else{%>
+            <h1>false</h1>
+        <%}%>
+
+    </body>
+</html>
