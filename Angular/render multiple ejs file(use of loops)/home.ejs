@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            
+            <%=title %>
+            
+        </title>
+    </head>
+    <body>
+        <h1>
+            Hello you have rendered content from HTML
+        </h1>
+        <ul>
+            
+                <% for(let i=1;i<10;i++){   %>
+
+                  
+                        <li>
+                            <%=i%>
+                        </li>
+               <% } %>
+
+        </ul>
+
+        <%if(true){%>
+            <h1>true</h1>
+
+        <%}else{%>
+            <h1>false</h1>
+        <%}%>
+
+    </body>
+</html>
