@@ -14,7 +14,7 @@ app.set('views',path.join(__dirname,'views'));     //__dirname gives us the corr
 
 app.get('/',function(req,res){
     
-    return res.render('home');  //whenevwe w render info from hrml file use render function and always return this one. 
+    return res.render('home');  //whenever we render info from hrml file use render function and always return this one. 
 });
 
 
