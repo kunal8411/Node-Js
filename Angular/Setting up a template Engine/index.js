@@ -8,8 +8,8 @@ const port=8000;
 const app= express();        //creating server using express........app will have many properties as a a key and value 
 app.set('view engine','ejs'); //setting view engine property in app object
 app.set('views',path.join(__dirname,'views'));     //__dirname gives us the correct path where our .js file is running and this set property
-                                                      will search views folder in that path, in views folder we have written our html file
-                                                      but with .ejs extansion 
+                                                     // will search views folder in that path, in views folder we have written our html file
+                                                     // but with .ejs extansion 
                                                         
 
 app.get('/',function(req,res){
