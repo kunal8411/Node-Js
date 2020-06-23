@@ -4,9 +4,9 @@ const port=8000;
 
 // var ejs=require('ejs')
 
-var contactList=[
+var contactList=[                   //crating array in js and pass this aray in html 
     {
-        name:"kunal",
+        name:"kunal",               //aray is a collecrion of objects 
         phoneNo:"1111111111111"
     },
     {
