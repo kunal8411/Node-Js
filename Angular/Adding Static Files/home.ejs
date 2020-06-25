@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>
+            
+            <%=title %>
+            
+        </title>
+        
+        //add static cs files inside ejs files 
+        
+        <link rel="stylesheet" href="/css/home.css" >
+
+    </head>
+    <body>
+        <h1>
+            Hello you have rendered content from HTML
+        </h1>
+        <ul>
+            
+                <% for(let i=1;i<10;i++){   %>
+
+                  
+                        <li>
+                            <%=i%>
+                        </li>
+               <% } %>
+
+        </ul>
+        <div>
+            <p>
+                <%for(let i of contact_list){%>
+                    <ul>
+                        <li>
+                         <p>  <%=i.name%></p> 
+                        
+                         <p>   <%=i.phoneNo%></p>
+                        </li>    
+                    </ul>
+                <%}%>
+
+            </p>
+        </div>
+              
+            
+        <%if(true){%>
+            <h1>true</h1>
+
+        <%}else{%>
+            <h1>false</h1>
+        <%}%>
+
+        <form action="/create-contact" method="POST">
+            <input type="text" name="name" placeholder="Enter your Name" required>
+            <input type="text" name="phoneno" placeholder="ENter your Phone number" required>
+
+            <button type="submit">
+                Create Contact 
+            </button>
+
+
+        </form>
+
+
+        //add js file inside ejs file, js file is inside /contactList/js folder
+        <script type="text/javascript" src="/js/home.js">
+
+        </script>
+
+    </body>
+</html>
