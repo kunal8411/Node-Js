@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>
+            
+            <%=title %>
+            
+        </title>
+    </head>
+    <body>
+        <h1>
+            Hello you have rendered content from HTML
+        </h1>
+        <ul>
+            
+                <% for(let i=1;i<10;i++){   %>
+
+                  
+                        <li>
+                            <%=i%>
+                        </li>
+               <% } %>
+
+        </ul>
+        <div>
+            <p>
+                <%for(let i of contact_list){%>
+                    <ul>
+                        <li>
+                         <p>  <%=i.name%></p> 
+                        
+                         <p>   <%=i.phoneNo%></p>
+                        </li>    
+                    </ul>
+                <%}%>
+
+            </p>
+        </div>
+              
+            
+        <%if(true){%>
+            <h1>true</h1>
+
+        <%}else{%>
+            <h1>false</h1>
+        <%}%>
+
+        <form action="/create-contact" method="POST">// create a form to take data and use post method here cauz we are sending data to server 
+                                                     //in action tag, provide the url where we will post our details      
+            <input type="text" name="name" placeholder="Enter your Name" required>
+            <input type="text" name="phone no" placeholder="ENter your Phone number" required>
+
+            <button type="submit">
+                Create Contact 
+            </button>
+
+
+        </form>
+    </body>
+</html>
