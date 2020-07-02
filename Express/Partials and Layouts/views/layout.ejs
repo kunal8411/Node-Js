@@ -5,10 +5,14 @@
         </title>
     </head>
     <body>
+    
+        //to include _header.ejs file use this syntax
+        //header of the page will always the code which we have written in _header.js
+        
         <%- include('_header'); -%>
         
             <%- body -%>
-
+        //same as header part , footer also be written in _footer.ejs part
         <%- include('_footer') -%>
     </body>
 </html>
