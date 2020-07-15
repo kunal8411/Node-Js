@@ -1,0 +1,25 @@
+// collect the data using reference variable(posts)
+//and dislay this post using for loop
+
+
+
+
+        <h1>My Home Page </h1>
+
+      <section id="feed-posts">
+              <h4>Posts</h4>
+              <form action="/post/create" id="new-post-form" method="POST">
+                      <textarea name="content"  cols="30" rows="3"></textarea>
+                      <input type="submit" value="Post">
+              </form>
+              <div id="posts-like-container"> 
+                      <ul>
+                              <% for(post of posts){ %>
+                                <li>
+                                        <%= post.content %>
+
+                                </li>
+                                <% } %>
+                      </ul>
+              </div>
+      </section>
