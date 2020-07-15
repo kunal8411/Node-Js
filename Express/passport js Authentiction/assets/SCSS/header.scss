@@ -1,0 +1,17 @@
+#container-header{
+    display: flex;                  /* establish flex container */
+  flex-direction: row;            /* default value; can be omitted */
+  flex-wrap: nowrap;              /* default value; can be omitted */
+  justify-content: space-around; /* switched from default (flex-start, see below) */
+  background-color: lightyellow;
+  text-align: center;
+  
+    
+}
+
+
+// #footer-container{
+//   width: 100%;
+//   height: 100px;
+//   background-color: lightgreen;
+// }
