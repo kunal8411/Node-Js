@@ -1,0 +1,10 @@
+In this project i have created different routes and include authentication using passport JS.
+
+This project have signup,login and sign-out button with proper authentication with MongoDb.
+
+Create,Delete,Read operations are performed in this project.(Update is remaining)
+
+
+
+
+
