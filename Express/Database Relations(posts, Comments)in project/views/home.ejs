@@ -1,0 +1,55 @@
+
+        <h1>My Home Page </h1>
+
+      <section id="feed-posts">
+              <h4>Posts</h4>
+
+              //to check if user is loged in or not 
+              <% if(locals.user){ %>
+              <form action="/post/create" id="new-post-form" method="POST">
+                      <textarea name="content"  cols="30" rows="3" required></textarea>
+                      <input type="submit" value="Post">
+              </form>
+              <% } %>
+              <div id="posts-like-container"> 
+                <ul>
+                        <% for(post of posts){ %>
+                          <li>
+                                  <p>
+                                          Post:
+                                        <%= post.content %>
+                                       <br>
+                                       <small>
+                                               Created By: 
+                                        <%= post.user.name%>
+                                       </small>
+                                  </p>
+                                  <div class="post-comments">
+                                          <%if(locals.user){%>
+                                        <form action="/comments/create" method="POST">
+                                                <input type="text" name="content" placeholder="Comment..." required>
+                                                <input type="hidden" value="<%= post._id %>" name="post">
+                                                <input type="submit" value="Add-Comment">
+                                        </form>
+                                        <%}%>
+                                        <div class="post-comment-lists">
+                                                <ul id="post-comments-<%=post._id%>">
+
+                                                        <% for(comment of post.comments) {%>
+                                                        <p>
+                                                                <%= comment.content%>
+                                                                <br>
+                                                                <small>
+                                                                        <%= comment.user.email %>
+                                                                </small>
+                                                        </p>
+                                                        <% } %>
+                                                </ul>
+                                        </div>
+                                  </div>
+                                  
+                          </li>
+                          <% } %>
+                </ul>
+        </div>
+      </section>
