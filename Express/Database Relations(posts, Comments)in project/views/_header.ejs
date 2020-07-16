@@ -1,0 +1,30 @@
+<header>
+<div id="container-header">
+
+    <div id="left-header">
+        CODEAIL
+    </div>
+    <div id="right-header">
+        <ul>
+            <% if(locals.user){ %> //if user is authenticated, show only logout link  
+                <li> <%= user.name%> </li>
+                <li>
+                    <a href="/users/signout">Sign-Out</a>
+                </li>
+                <% }else { %>    //if user is not loggedd in show sign up and sign out links 
+                    <li>
+                        <a href="/users/login">LogIn</a>
+                    </li>
+                    <li>
+                        <a href="/users/signup">signup</a>
+                    </li>
+            <% } %>        
+        </ul>
+    </div>
+
+</div>
+    
+
+    
+
+</header>
